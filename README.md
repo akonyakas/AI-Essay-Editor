@@ -30,13 +30,19 @@ source venv/bin/activate   # On Windows: .\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Run the app
+### 4. Create .env file and set OpenAI API key
+
+```bash
+OPENAI_API_KEY=""
+```
+
+### 5. Run uvicorn app
 
 ```bash
 uvicorn main:app --reload
 ```
 
-### 5. Access the app
+### 6. Access the app
 
 Open: `http://127.0.0.1:8000`
 
