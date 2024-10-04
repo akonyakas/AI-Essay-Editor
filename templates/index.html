@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Essay Editor</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="editor-container">
+            <div class="header-title">
+                <span> AI Essay Editor</span>
+            </div>
+
+            <!-- User prompt input -->
+            <input id="userPrompt" type="text" placeholder="Add any specific instruction for your essay..." class="user-prompt"/>
+
+            <textarea id="inputText" placeholder="Enter your text here..." oninput="updateWordCount()"></textarea>
+            <div id="wordCount" class="word-count">0/1000 words</div>
+            <button class="start-button" onclick="startEditing()">Start</button>
+        </div>
+
+        <div class="output-container" id="outputContainer">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>

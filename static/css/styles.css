@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #92A8A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #B8C1C2;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editor-container {
+    background-color: white;
+    border-radius: 15px;
+    width: 65%;
+    padding: 20px;
+    position: relative;
+}
+
+.editor-container textarea {
+    width: 100%;
+    height: 300px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #F5F5F5;
+    resize: none;
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.output-container {
+    width: 30%;
+    max-height: 400px; /* You can adjust this height */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.output-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.output-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.output-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.user-prompt {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.header-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.header-title span {
+    text-decoration: underline;
+    color: #F48C7A;
+}
+
+/* Styling for revisions */
+.revision {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.revision-original {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.revision-revised {
+    font-size: 14px;
+    color: #2E8B57;
+    margin-bottom: 5px;
+}
+
+.revision-explanation {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: relative;
+    right: 100px;
+    top: 50px; 
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.word-count {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Disabled button styles */
+.start-button:disabled {
+    background-color: #ccc;  /* Gray color when disabled */
+    cursor: not-allowed;     /* Change cursor when disabled */
+}
+
+/* Active button styles */
+.start-button {
+    background-color: #F4A896;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.start-button:hover {
+    background-color: #f67e68;
+}
